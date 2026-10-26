@@ -13,38 +13,9 @@ I help companies take enterprise software overseas — designing solutions that 
 
 ## ⭐ Featured project: Compliance Checkup
 
-**A cross-border recruitment data compliance checker covering 32 jurisdictions in 7 languages.**
+A cross-border recruitment data compliance checker covering 32 jurisdictions in 7 languages. Documents are parsed entirely in the browser, so candidate data never leaves the user's computer. Used in a real cross-border project to help a client's legal and security teams move a stalled 20-jurisdiction project forward.
 
-🔗 **Live:** [compliance-checker.hengruihope.workers.dev](https://compliance-checker.hengruihope.workers.dev/?lang=en)
-
-Paste a job application form or upload Word/PDF files. The tool detects which personal data fields are collected and tells you, market by market, whether each one is allowed, needs caution, is restricted (sensitive) or is prohibited — with the legal basis cited for every recommendation. It can then generate a DPIA draft as a Word document.
-
-**What makes it different**
-
-- **Privacy by design** — every document is parsed in the user's own browser; no candidate data ever reaches a server
-- **Honest about its limits** — each jurisdiction is graded by how thoroughly it has been verified, from field-by-field checks to classification estimates
-- **Built for real conversations with legal teams** — legal bases are cited per market, and DPIA drafts follow GDPR Art. 35(7) and ICO/EDPB templates
-- **7 languages** — Simplified & Traditional Chinese, English, Vietnamese, Indonesian, Japanese and Arabic (full right-to-left layout)
-
-**Real-world impact**
-
-- Used in a cross-border project for a multinational telecom group covering 20 jurisdictions: the project had stalled for four weeks across several rounds of meetings; a field-by-field analysis and DPIA draft for the client's legal and security teams got it moving again
-- Shared internally with pre-sales and delivery teams as a methodology for global compliance consulting
-
-**How it was built and shipped**
-
-```mermaid
-flowchart LR
-    A[Local edits] -->|git push| B[GitHub]
-    B -->|auto build| C[Cloudflare Workers]
-    C --> D[Live site · 7 languages]
-```
-
-- Iterated from v1.0 (manual checklist) to v4.1 (auto-detection, 32 jurisdictions, DPIA generation, 7 languages)
-- Version control with Git, automated deployment on every push, one-command rollback
-- Pre-launch security review: fixed an XSS issue in how uploaded content was rendered
-- Only the public site folder is published; notes and changelog stay private
-- Regression-tested so the multilingual rebuild produced output identical to the previous version
+🔗 [Live demo](https://compliance-checker.hengruihope.workers.dev/?lang=en) · 💻 [Source](https://github.com/Henryhope56/compliance-checker)
 
 ---
 
